@@ -5,16 +5,16 @@ import NeuroSamaPlush from './NeurosPlushInteraction/NeuroSamaPlush';
 import EvilNeuroPlush from './NeurosPlushInteraction/EvilNeuroPlush';
 
 const PlushSelector = () => {
-   const [selected, setSelected] = useState("nwero");
+   const [selected, setSelected] = useState(null);
 
    return (
       <>
          <div className="absolute left-0 -translate-x-[32%]">
-            <NeuroSamaPlush />
+            <NeuroSamaPlush selected={selected} setSelected={setSelected} />
          </div>
 
          <div className="absolute right-0 translate-x-[48%]">
-            <EvilNeuroPlush />
+            <EvilNeuroPlush selected={selected} setSelected={setSelected} />
          </div>
       </>
    )
