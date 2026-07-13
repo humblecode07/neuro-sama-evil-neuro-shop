@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+   --font-uncut-sans: var(--font-uncut);
+   --font-coffee: var(--font-coffee);
+   --font-fredoka: var(--font-fredoka);
+}
