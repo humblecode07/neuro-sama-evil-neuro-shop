@@ -4,9 +4,12 @@ import React, { useState } from 'react'
 import NeuroSamaPlush from './NeurosPlushInteraction/NeuroSamaPlush';
 import EvilNeuroPlush from './NeurosPlushInteraction/EvilNeuroPlush';
 
-const PlushSelector = () => {
-   const [selected, setSelected] = useState(null);
+type Props = {
+   selected: string | null;
+   setSelected: React.Dispatch<React.SetStateAction<string | null>>;
+}
 
+const PlushSelector = ({ selected, setSelected }: Props) => {
    return (
       <>
          <div className="absolute left-0 -translate-x-[32%]">
