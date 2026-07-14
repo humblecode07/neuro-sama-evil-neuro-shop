@@ -14,7 +14,7 @@ const NeuroSamaPlush = ({ selected, setSelected }: Props) => {
 
    const plushHover = () => {
       gsap.to(neuroSamaPlushRef.current, {
-         x: 350,
+         x: 340,
          duration: 0.3,
          ease: "power2.out"
       })
