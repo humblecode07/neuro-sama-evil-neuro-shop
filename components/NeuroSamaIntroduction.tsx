@@ -7,6 +7,8 @@ import Gears from './shapes/Gears'
 import ArrowLeft from './icons/ArrowLeft'
 import Image from 'next/image'
 import Heart from './icons/Heart'
+import Star from './icons/Star'
+import Diamond from './icons/Diamond'
 
 const NeuroSamaIntroduction = () => {
    const introductionRef = useRef(null);
@@ -23,6 +25,7 @@ const NeuroSamaIntroduction = () => {
       <div ref={introductionRef} className='relative h-screen'>
          <NeuroSamaBg />
          <Gears />
+         <Star />
          <button
             className='flex gap-[.75rem] items-center pl-[2rem] pt-[2rem] cursor-pointer group'
          >
@@ -32,7 +35,10 @@ const NeuroSamaIntroduction = () => {
             </span>
          </button>
          <div className='relative flex pl-[51.125rem] pt-[15rem] z-[1] flex-col'>
-            <span className='font-uncut-sans text-[.75rem] font-medium text-[#555555]'>O U R &nbsp; W O R L D S &nbsp; S M A R T E S T &nbsp; C O O K I E</span>
+            <div className='flex gap-[.5rem] items-center'>
+               <span className='font-uncut-sans text-[.75rem] font-medium text-[#555555]'>O U R &nbsp; W O R L D S &nbsp; S M A R T E S T &nbsp; C O O K I E</span>
+               <Diamond />
+            </div>
             <h1
                className="font-coffee text-[10.125rem] text-[#FDEFE0] rotate-[-1.22deg]"
                style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
