@@ -2,7 +2,7 @@ import React from 'react'
 
 const NeuroSamaBg = () => {
    return (
-      <svg className='absolute h-screen right-0' viewBox="0 0 1253 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='absolute h-screen  right-0' viewBox="0 0 1280 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
          <g filter="url(#filter0_n_16_4)">
             <path d="M41.2221 -1.01038H1257.54V1030.99H18.2161C18.2161 1030.99 6.21345 1023.43 31.2198 963.97C56.2262 904.509 -21.294 842.529 31.2198 753.841C83.7336 665.154 18.7158 651.044 48.7241 574.451C78.7323 497.857 48.7241 405.642 48.7241 405.642C48.7241 405.642 5.21245 304.357 18.2161 244.896C31.2198 185.435 38.2213 180.396 56.2264 136.052C74.2316 91.7084 41.2221 -1.01038 41.2221 -1.01038Z" fill="#FFAC80" />
          </g>
