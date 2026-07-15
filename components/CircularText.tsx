@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 
 const CircularText = () => {
-  const circularTextRef = useRef<HTMLDivElement | null>(null);
+  const circularTextRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     gsap.to(circularTextRef.current, {

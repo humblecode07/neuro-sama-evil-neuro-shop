@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 
 const Cookie = ({ className = '' }) => {
-  const cookieRef = useRef<HTMLDivElement | null>(null);
+  const cookieRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     gsap.to(cookieRef.current, {

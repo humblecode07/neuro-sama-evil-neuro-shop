@@ -4,7 +4,7 @@ import Cookie from './icons/Cookie'
 import Merch from './icons/Merch'
 
 type Props = {
-   selected: string;
+   selected: string | null;
 }
 
 const HeroCenter = ({ selected }: Props) => {

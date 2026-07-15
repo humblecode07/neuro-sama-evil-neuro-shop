@@ -41,15 +41,22 @@ const NeuroSamaPlush = ({ selected, setSelected }: Props) => {
    }, [selected])
 
    return (
-      <div onClick={() => setSelected("nwero")} onMouseEnter={plushHover} onMouseLeave={plushHoverLeave} ref={neuroSamaPlushRef} className={`relative w-[43.0625rem] h-[57.4375rem] ml-[-18%]
-               `}>
-         <Image
-            src="/neuro_fumo_1.png"
-            alt="Neuro-Sama Fumo"
-            fill
-            priority
-            className="object-contain"
-         />
+      <div className="h-screen w-[43.0625rem] ml-[-18%] flex items-center justify-center">
+         <div
+            onClick={() => setSelected("nwero")}
+            onMouseEnter={plushHover}
+            onMouseLeave={plushHoverLeave}
+            ref={neuroSamaPlushRef}
+            className="relative w-[43.0625rem] h-[57.4375rem]"
+         >
+            <Image
+               src="/neuro_fumo_1.png"
+               alt="Neuro-Sama Fumo"
+               fill
+               priority
+               className="object-contain"
+            />
+         </div>
       </div>
    )
 }
