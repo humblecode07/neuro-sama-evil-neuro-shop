@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Heart from './icons/Heart'
 import Star from './icons/Star'
 import Diamond from './icons/Diamond'
+import EvilBadge from './EvilBadge'
 
 const NeuroSamaIntroduction = () => {
    const introductionRef = useRef(null);
@@ -27,8 +28,6 @@ const NeuroSamaIntroduction = () => {
          {/* Background layer: z-index 0, isolated from content flow */}
          <div className="absolute inset-0 pointer-events-none z-0">
             <NeuroSamaBg />
-            <Gears />
-            <Star />
          </div>
 
          {/* Navigation Layer */}
@@ -44,22 +43,22 @@ const NeuroSamaIntroduction = () => {
          </div>
 
          {/* Responsive Content Alignment Area */}
-         <div className="relative z-10 flex-grow flex items-center justify-end px-6 md:px-12 lg:px-24">
-            <div className='w-full max-w-[46.6875rem] flex flex-col justify-center py-12'>
+         <div className="relative z-10 flex-grow flex items-center justify-end px-[16%]">
+            <div className='w-full max-w-[50rem] flex flex-col justify-center py-12'>
                <div className='flex gap-[.5rem] items-center'>
                   <span className='font-uncut-sans text-[.75rem] font-medium text-[#555555]'>O U R &nbsp; W O R L D S &nbsp; S M A R T E S T &nbsp; C O O K I E</span>
                   <Diamond />
                </div>
                
                <h1
-                  className="font-coffee text-[clamp(4.5rem,7.5vw,10.125rem)] text-[#FDEFE0] rotate-[-1.22deg] leading-none"
+                  className="font-coffee text-[clamp(4.5rem,7.5vw,10.125rem)] text-[#FDEFE0] rotate-[-1.22deg] leading-none pt-[1.75rem]"
                   style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
                >
                   Neuro-sama
                </h1>
                
                <span className='font-uncut-sans w-full text-[#ffffff] rotate-[-0.7deg] mt-[1rem] leading-relaxed text-[0.875rem] md:text-[1rem] block'>
-                  An AI-powered virtual streamer (VTuber) known for interacting with viewers, playing games, and collaborating with other creators through real-time conversations. Developed by Vedal987, she has become one of the most recognized AI personalities in online streaming. Just be warned, she can be a little <span className='text-[#B26841]'>unhinged</span>.
+                 The internet's favorite gremlin AI. Neuro-sama streams, games, roasts chat, and occasionally short-circuits mid-sentence — all in real time. Built by <span className='text-[#BFFFB7] font-coffee'>Vedal987</span>, she's become one of the most recognized (and unpredictable) personalities in AI streaming. Enter at your own risk. heart &lt;3.
                </span>
                
                <div className='flex flex-wrap gap-[1rem] md:gap-[1.625rem] pt-[2.54rem]'>
@@ -81,6 +80,21 @@ const NeuroSamaIntroduction = () => {
                      </div>
                   </button>
                </div>
+            </div>
+         </div>
+         <div>
+            <EvilBadge />
+            <div className='w-[5.375rem] h-[5.375rem] rounded-full absolute z-[100] bottom-0 right-0 mb-[4.5rem] mx-[4.8rem] overflow-hidden'>
+               <div className='w-full h-full rounded-full bg-[#ffffff] inset-0 absolute'>
+
+               </div>
+               <Image 
+                  src="/girl-catgirl.gif"
+                  alt="Evil Neuro Gif"
+                  width={81}
+                  height={79}
+                  className='absolute top-[0.5rem]'
+               />
             </div>
          </div>
       </div>
