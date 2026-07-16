@@ -17,7 +17,7 @@ const HomeScreen = () => {
       <main className={`relative h-full w-full transition-colors duration-700 ease-in-out ${selected ? backgrounds[selected] : ""}`}>
          <PlushSelector selected={selected} setSelected={setSelected} />
          <HeroCenter selected={selected} />
-         {selected === "nwero" ? <NeuroSamaIntroduction /> : null}
+         {selected === "nwero" ? <NeuroSamaIntroduction setSelected={setSelected} /> : null}
       </main>
    )
 }

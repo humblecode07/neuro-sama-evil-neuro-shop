@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import NeuroSamaBg from './NeuroSamaBg'
 import Gears from './shapes/Gears'
@@ -11,8 +11,13 @@ import Star from './icons/Star'
 import Diamond from './icons/Diamond'
 import EvilBadge from './EvilBadge'
 
-const NeuroSamaIntroduction = () => {
+type Props = {
+   setSelected: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const NeuroSamaIntroduction = ({ setSelected }: Props) => {
    const introductionRef = useRef(null);
+   const containerRef = useRef(null);
 
    useEffect(() => {
       gsap.fromTo(
@@ -21,6 +26,22 @@ const NeuroSamaIntroduction = () => {
          { opacity: 1, duration: 0.3, ease: 'power2.out' }
       );
    }, [])
+
+   useLayoutEffect(() => {
+      const buttons = containerRef.current.querySelectorAll('.action-btn');
+
+      gsap.set(buttons, { opacity: 0, scale: 0.4, y: 40 });
+
+      gsap.to(buttons, {
+         opacity: 1,
+         scale: 1,
+         y: 0,
+         duration: 0.9,
+         ease: 'elastic.out(1, 0.6)',
+         stagger: 0.15,
+         delay: 0.2,
+      });
+   }, []);
 
    return (
       <div ref={introductionRef} className='relative min-h-screen w-full overflow-hidden flex flex-col justify-between'>
@@ -34,6 +55,7 @@ const NeuroSamaIntroduction = () => {
          <div className="relative z-10 w-full px-6 py-6 md:px-8">
             <button
                className='flex gap-[.75rem] items-center cursor-pointer group'
+               onClick={() => setSelected(null)}
             >
                <ArrowLeft className='transition-all duration-300 text-[#847B7B] group-hover:text-[#000]' />
                <span className='font-uncut-sans text-[.75rem] text-[#847B7B] transition-colors duration-300 group-hover:text-[#000]'>
@@ -61,23 +83,28 @@ const NeuroSamaIntroduction = () => {
                  The internet's favorite gremlin AI. Neuro-sama streams, games, roasts chat, and occasionally short-circuits mid-sentence — all in real time. Built by <span className='text-[#BFFFB7] font-coffee'>Vedal987</span>, she's become one of the most recognized (and unpredictable) personalities in AI streaming. Enter at your own risk. heart &lt;3.
                </span>
                
-               <div className='flex flex-wrap gap-[1rem] md:gap-[1.625rem] pt-[2.54rem]'>
-                  <button className='w-full sm:w-[18.3125rem] h-[3.8125rem] bg-[#FDEFE0] rounded-full flex items-center justify-center rotate-[-0.13deg]' style={{ boxShadow: '0 4px 4px rgba(114, 24, 57, 0.25)' }}>
-                     <div className='w-[96%] h-[84%] border-[#FFAC80] border-dashed border-[1px] rounded-full flex items-center justify-center gap-[.65rem]'>
-                        <Image
-                           src="/vedal.png"
-                           alt="Vedal AI Icon"
-                           width={19}
-                           height={19}
-                        />
-                        <span className='font-coffee text-[#FFAC80] pt-[0.325rem]'>Check her channel</span>
-                     </div>
+               <div
+                  ref={containerRef}
+                  className='flex flex-wrap gap-[1rem] md:gap-[1.625rem] pt-[2.54rem]'
+               >
+                  <button
+                  className='action-btn w-full sm:w-[18.3125rem] h-[3.8125rem] bg-[#FDEFE0] rounded-full flex items-center justify-center rotate-[-0.13deg]'
+                  style={{ boxShadow: '0 4px 4px rgba(114, 24, 57, 0.25)' }}
+                  >
+                  <div className='w-[96%] h-[84%] border-[#FFAC80] border-dashed border-[1px] rounded-full flex items-center justify-center gap-[.65rem]'>
+                     <Image src="/vedal.png" alt="Vedal AI Icon" width={19} height={19} />
+                     <span className='font-coffee text-[#FFAC80] pt-[0.325rem]'>Check her channel</span>
+                  </div>
                   </button>
-                  <button className='w-full sm:w-[18.3125rem] h-[3.8125rem] bg-[#FDEFE0] rounded-full flex items-center justify-center rotate-[-1.24deg]' style={{ boxShadow: '0 4px 4px rgba(114, 24, 57, 0.25)' }}>
-                     <div className='w-[96%] h-[84%] border-[#FFAC80] border-dashed border-[1px] rounded-full flex items-center justify-center gap-[.65rem]'>
-                        <Heart />
-                        <span className='font-coffee text-[#FFAC80] pt-[0.325rem]'>Shop her merch!</span>
-                     </div>
+
+                  <button
+                  className='action-btn w-full sm:w-[18.3125rem] h-[3.8125rem] bg-[#FDEFE0] rounded-full flex items-center justify-center rotate-[-1.24deg]'
+                  style={{ boxShadow: '0 4px 4px rgba(114, 24, 57, 0.25)' }}
+                  >
+                  <div className='w-[96%] h-[84%] border-[#FFAC80] border-dashed border-[1px] rounded-full flex items-center justify-center gap-[.65rem]'>
+                     <Heart />
+                     <span className='font-coffee text-[#FFAC80] pt-[0.325rem]'>Shop her merch!</span>
+                  </div>
                   </button>
                </div>
             </div>

@@ -38,6 +38,14 @@ const EvilNeuroPlush = ({ selected, setSelected }: Props) => {
             ease: "power2.out"
          })
       }
+
+      if (selected === null) {
+           gsap.to(evilNeuroPlushRef.current, {
+            x: 0,
+            duration: 0.5,
+            ease: "power2.out"
+         })
+      }
    }, [selected])
 
    return (
