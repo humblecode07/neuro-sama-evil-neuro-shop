@@ -38,6 +38,23 @@ const NeuroSamaPlush = ({ selected, setSelected }: Props) => {
             ease: "power2.out"
          })
       }
+
+      if (selected === null) {
+         gsap.to(neuroSamaPlushRef.current, {
+            x: 340,
+            y: 0,
+            duration: 0.3,
+            ease: "power2.out"
+         })
+      }
+
+      if (selected === "nwerosama-merch") {
+         gsap.to(neuroSamaPlushRef.current, {
+            y: 370,
+            duration: 0.3,
+            ease: "power2.out"
+         })
+      }
    }, [selected])
 
    return (
