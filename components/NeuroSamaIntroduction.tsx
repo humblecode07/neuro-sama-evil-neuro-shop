@@ -138,7 +138,7 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
          {selected === "nwerosama-merch" && (
             <>
                <MessageBubble />
-               <div className="flex flex-col w-[62.375rem] pt-[2rem] pr-[4.25rem] items-end">
+               <div className="flex flex-col pt-[2rem] pr-[4.25rem] items-end">
                   <div className="">
                      <div className="relative min-w-[3.1875rem] h-[3.1875rem] flex items-center justify-center">
                         <div className="absolute inset-0 bg-[#FDEFE0] rounded-full backdrop-blur-md shadow-lg"></div>
@@ -153,8 +153,8 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
                         <Merch />
                      </div>
                   </div>
-                  <div className="relative z-[1]">
-                     <div className="flex items-center">
+                  <div className="w-[62.375rem] relative z-[1] pt-[5.375rem] flex flex-col justify-center items-center">
+                     <div className="flex items-center gap-[.75rem]">
                         <SmallStar />
                         <Line />
                         <TripleDiamond />
