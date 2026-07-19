@@ -11,6 +11,10 @@ import Star from './icons/Star'
 import Diamond from './icons/Diamond'
 import EvilBadge from './EvilBadge'
 import MessageBubble from './shapes/MessageBubble'
+import Merch from './icons/Merch'
+import SmallStar from './icons/SmallStar'
+import Line from './icons/Line'
+import TripleDiamond from './icons/TripleDiamond'
 
 type Props = {
    selected: string | null;
@@ -46,7 +50,7 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
    }, []);
 
    return (
-      <div ref={introductionRef} className='relative min-h-screen w-full overflow-hidden flex flex-col justify-between'>
+      <div ref={introductionRef} className='relative min-h-screen w-full overflow-hidden flex justify-between'>
 
          {/* Background layer: z-index 0, isolated from content flow */}
          <div className="absolute inset-0 pointer-events-none z-0">
@@ -70,14 +74,14 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
          {selected === "nwero" && (
             <>
                <div className="relative z-10 flex-grow flex items-center justify-end px-[16%]">
-                  <div className='w-full max-w-[50rem] flex flex-col justify-center py-12'>
+                  <div className='w-full flex flex-col justify-center py-12'>
                      <div className='flex gap-[.5rem] items-center'>
                         <span className='font-uncut-sans text-[.75rem] font-medium text-[#555555]'>O U R &nbsp; W O R L D S &nbsp; S M A R T E S T &nbsp; C O O K I E</span>
                         <Diamond />
                      </div>
 
                      <h1
-                        className="font-coffee text-[clamp(4.5rem,7.5vw,10.125rem)] text-[#FDEFE0] rotate-[-1.22deg] leading-none pt-[1.75rem]"
+                        className="font-coffee whitespace-nowrap text-[clamp(4.5rem,7.5vw,10.125rem)] text-[#FDEFE0] rotate-[-1.22deg] leading-none pt-[1.75rem]"
                         style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
                      >
                         Neuro-sama
@@ -134,6 +138,33 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
          {selected === "nwerosama-merch" && (
             <>
                <MessageBubble />
+               <div className="flex flex-col w-[62.375rem] pt-[2rem] pr-[4.25rem] items-end">
+                  <div className="">
+                     <div className="relative min-w-[3.1875rem] h-[3.1875rem] flex items-center justify-center">
+                        <div className="absolute inset-0 bg-[#FDEFE0] rounded-full backdrop-blur-md shadow-lg"></div>
+
+                        <div className="absolute top-0 right-0 w-[1.125rem] h-[1.125rem] flex items-center justify-center">
+                           <div className="absolute inset-0 bg-[#FF1F1F] rounded-full"></div>
+                           <span className="relative font-coffee text-white text-[.75rem]">
+                              0
+                           </span>
+                        </div>
+
+                        <Merch />
+                     </div>
+                  </div>
+                  <div className="relative z-[1]">
+                     <div className="flex items-center">
+                        <SmallStar />
+                        <Line />
+                        <TripleDiamond />
+                        <span className="font-coffee whitespace-nowrap text-[#FDEFE0] text-[1.5rem]">Featured Collection</span>
+                        <TripleDiamond />
+                        <Line />
+                        <SmallStar />
+                     </div>
+                  </div>
+               </div>
             </>
          )}
       </div>
