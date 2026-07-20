@@ -1,4 +1,4 @@
-const characters = [
+export const characters = [
    {
       name: "Neuro-sama",
       slug: "neuro-sama"
@@ -9,7 +9,7 @@ const characters = [
    }
 ];
 
-const categories = [
+export const categories = [
    {
       name: "Plush",
       slug: "plush",
@@ -28,7 +28,7 @@ const categories = [
    }
 ]
 
-const products = [
+export const products = [
    {
       name: "Neuro-sama Duality Plush",
       slug: "neuro-sama-duality-plush",
