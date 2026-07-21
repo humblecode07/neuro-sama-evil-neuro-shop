@@ -19,9 +19,10 @@ import TripleDiamond from './icons/TripleDiamond'
 type Props = {
    selected: string | null;
    setSelected: React.Dispatch<React.SetStateAction<string | null>>;
+   featuredMerch: React.ReactNode;
 }
 
-const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
+const NeuroSamaIntroduction = ({ selected, setSelected, featuredMerch }: Props) => {
    const introductionRef = useRef(null);
    const containerRef = useRef(null);
 
@@ -153,7 +154,7 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
                         <Merch />
                      </div>
                   </div>
-                  <div className="w-[62.375rem] relative z-[1] pt-[5.375rem] flex flex-col justify-center items-center">
+                  <div className="w-[51.98vw] relative z-[1] pt-[5.375rem] flex flex-col justify-center items-center gap-[2.125rem]">
                      <div className="flex items-center gap-[.75rem]">
                         <SmallStar />
                         <Line />
@@ -163,6 +164,7 @@ const NeuroSamaIntroduction = ({ selected, setSelected }: Props) => {
                         <Line />
                         <SmallStar />
                      </div>
+                     {featuredMerch}
                   </div>
                </div>
             </>

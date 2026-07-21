@@ -1,3 +1,4 @@
+import FeaturedMerch from "@/components/NeuroSamaFeaturedMerch";
 import HomeScreen from "@/components/HomeScreen";
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
@@ -7,13 +8,20 @@ export default async function Home() {
 
   const supabase = await createClient(cookieStore);
 
-  const { data } = await supabase.from("products").select("*");
-
-  console.log(data);
+  const { data } = await supabase
+    .from("products")
+    .select(`
+        *,
+        product_images (
+          image_url,
+          display_order
+        )
+      `)
+    .order("display_order", { referencedTable: "product_images" });
 
   return (
     <div className="h-full w-full overflow-hidden">
-      <HomeScreen />
+      <HomeScreen featuredMerch={<FeaturedMerch products={data} />} />
     </div>
   );
 }

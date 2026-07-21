@@ -39,43 +39,43 @@ export const products = [
       stock: 100,
       images: [
          {
-            image_url: "/neuro-sama-duality-plush-fumo_1.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_1.jpg",
             display_order: 0
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_2.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_2.jpg",
             display_order: 1
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_3.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_3.jpg",
             display_order: 2
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_4.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_4.jpg",
             display_order: 3
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_5.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_5.jpg",
             display_order: 4
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_6.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_6.jpg",
             display_order: 5
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_7.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_7.jpg",
             display_order: 6
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_8.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_8.jpg",
             display_order: 7
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_9.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_9.jpg",
             display_order: 8
          },
          {
-            image_url: "/neuro-sama-duality-plush-fumo_10.jpg",
+            image_url: "/neuro-sama-duality-plush/fumo_10.jpg",
             display_order: 9
          },
       ]
@@ -90,43 +90,43 @@ export const products = [
       stock: 100,
       images: [
          {
-            image_url: "/evil-neuro-duality-plush-fumo_1.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_1.jpg",
             display_order: 0
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_2.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_2.jpg",
             display_order: 1
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_3.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_3.jpg",
             display_order: 2
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_4.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_4.jpg",
             display_order: 3
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_5.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_5.jpg",
             display_order: 4
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_6.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_6.jpg",
             display_order: 5
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_7.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_7.jpg",
             display_order: 6
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_8.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_8.jpg",
             display_order: 7
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_9.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_9.jpg",
             display_order: 8
          },
          {
-            image_url: "/evil-neuro-duality-plush-fumo_10.jpg",
+            image_url: "/evil-neuro-duality-plush/fumo_10.jpg",
             display_order: 9
          },
       ]
