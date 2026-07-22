@@ -51,7 +51,7 @@ const NeuroSamaIntroduction = ({ selected, setSelected, featuredMerch }: Props) 
    }, []);
 
    return (
-      <div ref={introductionRef} className='relative min-h-screen w-full overflow-hidden flex justify-between'>
+      <div ref={introductionRef} className='relative h-screen w-full flex justify-between overflow-hidden'>
 
          {/* Background layer: z-index 0, isolated from content flow */}
          <div className="absolute inset-0 pointer-events-none z-0">
@@ -154,8 +154,8 @@ const NeuroSamaIntroduction = ({ selected, setSelected, featuredMerch }: Props) 
                         <Merch />
                      </div>
                   </div>
-                  <div className="w-[51.98vw] relative z-[1] pt-[5.375rem] flex flex-col justify-center items-center gap-[2.125rem]">
-                     <div className="flex items-center gap-[.75rem]">
+                  <div className="w-[51.98vw] h-full relative z-[1] pt-[5.375rem] flex flex-col justify-center items-center gap-[2.125rem] ">
+                     <div className="flex items-center gap-[.75rem] shrink-0">
                         <SmallStar />
                         <Line />
                         <TripleDiamond />
@@ -164,7 +164,9 @@ const NeuroSamaIntroduction = ({ selected, setSelected, featuredMerch }: Props) 
                         <Line />
                         <SmallStar />
                      </div>
-                     {featuredMerch}
+                     <div className="w-full flex-1 overflow-y-auto pb-[5rem] scrollbar-none">
+                        {featuredMerch}
+                     </div>
                   </div>
                </div>
             </>

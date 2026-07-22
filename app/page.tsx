@@ -24,7 +24,7 @@ export default async function Home() {
     .order("display_order", { referencedTable: "product_images" });
 
   return (
-    <div className="h-full w-full overflow-hidden">
+    <div className="min-h-screen w-full overflow-hidden">
       <HomeScreen featuredMerch={<FeaturedMerch products={data} />} />
     </div>
   );
