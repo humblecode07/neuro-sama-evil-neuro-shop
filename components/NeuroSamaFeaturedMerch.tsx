@@ -28,27 +28,29 @@ interface ProductListProps {
 
 const NeuroSamaFeaturedMerch = ({ products }: ProductListProps) => {
 
-   console.log(products)
 
    return (
       <div className="w-full flex flex-wrap items-center justify-center gap-[2rem]">
          {products?.map((product) => {
             const coverImage = product.product_images[0];
 
-            console.log(product.character_id + "baaa")
-
             if (product.character_id === 4) {
                return (
-                  <div key={product.id} className="relative w-[30.0625rem] h-[35.9375rem] aspect-square">
+                  <div key={product.id} className="relative flex flex-col aspect-square gap-[.75rem]">
                      {coverImage && (
                         <Image
+                           width={481}
+                           height={575}
                            src={coverImage.image_url}
                            alt={product.name}
-                           fill
                            priority
                            className="object-cover border rounded-[.25rem]"
                         />
                      )}
+                     <div className="flex flex-col gap-[6px]">
+                        <span className="font-fredoka text-[#FFFFFF] font-semibold text-[1.25rem]">{product.name}</span>
+                        <span className="font-fredoka text-[#FFFFD9] font-semibold">${(product.price / 100).toFixed(2)}</span>
+                     </div>
                   </div>
                );
             }
