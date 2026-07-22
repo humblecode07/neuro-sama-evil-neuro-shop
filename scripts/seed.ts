@@ -18,15 +18,16 @@ async function seed() {
    }
 
    for (const product of products) {
-      const character = insertedCharacters?.find(
-         c => c.slug === product.character
-      )
+      const productCharacters = insertedCharacters.filter((character) =>
+         product.characters.includes(character.slug)
+      );
+
 
       const category = insertedCategories.find(
          c => c.slug === product.category
       );
 
-      if (!character || !category) continue;
+      if (!productCharacters.length || !category) continue;
 
       const { data: insertedProduct, error: productError } = await supabase
          .from("products")
@@ -34,13 +35,26 @@ async function seed() {
             name: product.name,
             slug: product.slug,
             description: product.description,
-            character_id: character.id,
             category_id: category.id,
             price: product.price,
             stock: product.stock,
          })
          .select()
          .single();
+
+      if (productError) {
+         console.log(productError);
+         continue;
+      }
+
+      const { error: productCharacterError } = await supabase
+         .from("product_characters")
+         .insert(
+            productCharacters.map((character) => ({
+               product_id: insertedProduct.id,
+               character_id: character.id,
+            }))
+         );
 
       const { error: imageError } = await supabase
          .from("product_images")

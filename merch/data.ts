@@ -41,7 +41,7 @@ export const products = [
       name: "Neuro-sama Duality Plush",
       slug: "neuro-sama-duality-plush",
       description: "She so qte, an adorable little gremlin plushie wearing her new t-shirt she designed!",
-      character: [
+      characters: [
          "neuro-sama"
       ],
       category: "plush",
@@ -94,7 +94,7 @@ export const products = [
       name: "Evil Neuro Duality Plush",
       slug: "evil-neuro-duality-plush",
       description: "She so qte, an adorable little gremlin plushie wearing her new t-shirt she designed!",
-      character: [
+      characters: [
          "evil-neuro"
       ],
       category: "plush",
@@ -147,7 +147,7 @@ export const products = [
       name: "Emote Key Chain Bundle",
       slug: "emote-key-chain-bundle",
       description: "A bundle of adorable Neuro-sama and Evil Neuro emote keychains featuring their cute and chaotic expressions. Perfect for adding a little gremlin energy to your bag, desk, or collection!",
-      character: [
+      characters: [
          "neuro-sama",
          "evil-neuro"
       ],
@@ -295,7 +295,7 @@ export const products = [
       name: "Evil Neuro Birthday Tee",
       slug: "evil-neuro-birthday-tee",
       description: "Celebrate Evil Neuro's birthday with this special edition tee featuring her chaotic and mischievous design. A perfect addition for fans who love the darker side of the Neuro duo!",
-      character: [
+      characters: [
          "evil-neuro"
       ],
       category: "tees",
