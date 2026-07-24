@@ -19,6 +19,9 @@ export default async function Home() {
         product_characters (
           character_id,
           product_id
+        ),
+        characters (
+          slug
         )
       `)
     .order("display_order", { referencedTable: "product_images" });

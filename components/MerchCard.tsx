@@ -1,9 +1,12 @@
 "use client";
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
 const MerchCard = ({ product }) => {
+   const router = useRouter();
+
    const [image, setImage] = useState(product.product_images[0].image_url);
 
    const merchDisplayChangeWhenHover = () => {
@@ -14,8 +17,12 @@ const MerchCard = ({ product }) => {
       setImage(product.product_images[0].image_url)
    }
 
+   const clickCard = (data) => {
+      router.push(`${data.characters[0].slug}/${product.slug}`)
+   }
+
    return (
-      <div onMouseEnter={() => merchDisplayChangeWhenHover()} onMouseLeave={() => merchDisplayChangeWhenNotHover()} className="relative flex flex-col aspect-square gap-[.75rem]">
+      <div onClick={() => clickCard(product)} onMouseEnter={() => merchDisplayChangeWhenHover()} onMouseLeave={() => merchDisplayChangeWhenNotHover()} className="relative flex flex-col aspect-square gap-[.75rem]">
          {image && (
             <Image
                width={481}
